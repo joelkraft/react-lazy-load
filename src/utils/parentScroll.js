@@ -6,6 +6,8 @@ const style = (element, prop) =>
 const overflow = (element) =>
   style(element, 'overflow') + style(element, 'overflow-y') + style(element, 'overflow-x');
 
+const HTMLElement = typeof HTMLElement === 'undefined' ? function(){} : HTMLElement;
+
 const scrollParent = (element) => {
   if (!(element instanceof HTMLElement)) {
     return window;
